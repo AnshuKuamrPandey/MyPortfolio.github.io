@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/691da0ddad.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        header{
+            width: 100%;
+            height: 100vh;
+            background-image:url(/Images/bg-1.jpg) ;
+            background-size: cover;
+            background-position: center;
+        }
+        .name{
+            color: #ff004f;
+        }
+        .about-text{
+            color: #ababab;
+        }
+        .about-img{
+            width: 30%;
+            /* padding-left: 40px; */
+        }
+        .nav-links{
+            position: relative;
+        }
+        .nav-links::after{
+            content: " ";
+            width: 0;
+            background-color: #ff004f;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        .nav-links:hover::after{
+            width: 100%;
+        }
+        .tab-links{
+            position: relative;
+        }
+        .tab-links::after{
+            content: " ";
+            width: 0;
+            background-color: #ff004f;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        
+        .tab-links.active-link::after{
+            width: 100%;
+        }
+        .ser-box{
+            height: 300px;
+        }
+        .ser-box div{
+            background-color: #262626;
+            padding: 40px;
+            padding-top:  10px;
+           transition: background 0.5s,transform 0.5s;
+        }
+        .ser-box div p {
+            color: #ece8e8;
+            padding-top: 6px;
+        }
+
+        .ser-box div:hover{
+
+            background: #ff004f;
+            transform: translateY(-10px);
+        }
+
+        .work{
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .layer{
+            /* margin-top: 10px;  */
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0,0,0,.6),#ff004f);
+            border-radius: 5px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px;
+            text-align: center;
+            transition: height .5s;
+        }
+        .work a{
+            padding-top: 10px;
+            color: blue;
+        }
+        .work:hover .layer{
+            height: 100%;
+        }
+        .contact-left span{
+            padding-left: 10px;
+        }
+        .icon{
+            color: #ff004f;
+        }
+        .icons{
+            color:#ece8e8 ;
+            font-size: 40px;
+        }
+        .btn-cv{
+            background: #ff004f;
+
+        }
+        .contact-right input{
+            width: 500px;
+        }
+        .contact-right textarea{
+            background-color:#252424 ;
+        }
+        .in-1{
+            height: 60px;
+            border-radius: 10px; 
+            padding: 20px;
+            background: #252424;
+            /* color: #010101; */
+        }
+        .in-2{
+            height: 60px;
+            border-radius: 10px; 
+            padding: 20px;
+            background: #252424;
+            /* color: #010101; */
+        }
+       
+        .in-1 ::placeholder{
+            color: slategray;
+            font-weight: 100;
+        }
+        #btn{
+            width: fit-content;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 24px;
+            padding-right: 24px;
+           background-color: #ff004f;
+        }
+            
+            
+       
+        
+
+
+      
+
+
+
+
+
+        /* .img{
+            padding-left: 40px;
+        } */
+
+    </style>
+</head>
+<body class="bg-black text-white">
+    <header id="header" class="" >
+        <div class="  container mx-auto pl-28 ">
+            <nav class=" items-center flex  justify-between pt-6   ">
+                 <img class="w-28   " src="/Images/logo.png" alt="" srcset="">
+                 <ul class="flex gap-9 pr-60">
+                    <li><a  class="nav-links text-xl " href="#header">Home</a></li>
+                    <li><a class="nav-links text-xl " href="#about">About</a></li>
+                    <li><a class="nav-links text-xl " href="#services">Services</a></li>
+                    <li><a class="nav-links text-xl " href="#contact">Contect</a></li>
+                 </ul>
+            </nav>
+            <!-- Heading text  -->
+            <div class="  left-8 flex flex-col mt-44 ">
+                <p class="text-xl">Front-End Development / JAVA / JAVA Script  </p>
+                <h2 class="text-6xl font-bold">Hi, I'm <span class="name">Anshu</span> <br> Pandey from India.</h2>
+            </div>
+
+            
+        </div>
+
+    </header>
+  <!-- About me Section  -->
+    <div id="about" class="pt-32">
+        <div class="container mx-auto pl-28  ">
+            
+            <div class="flex gap-20 ">
+            <div class=" about-img ">
+                <img class=" rounded-md" src="/Images/user.png">
+            </div>
+        <div class="flex flex-col max-w-2xl about-text">
+            <h2 class="  text-6xl text-white font-bold  ">About Me</h2>
+            <p class="pt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci cupiditate aut perferendis ipsum culpa fugiat dolores quis voluptas unde, odit dolorum blanditiis quidem. Quibusdam et, officia magnam eum reprehenderit natus molestiae doloremque consequuntur a eligendi repudiandae odio, nobis libero?</p>
+            
+                <ul class="flex text-white font-bold gap-20">
+                  <li   class="tab-links tab-1  cursor-pointer"> Skill</li>
+                  <li  class="tab-links tab-2  cursor-pointer"> Experience</li>
+                  <li  class="tab-links tab-3  cursor-pointer">Eduction</li>
+                  <li  class="tab-links tab-4  cursor-pointer">My Team members  </li>
+                </ul>
+
+                <div class="list-contents pt-10">
+                    <ul class="list-disc flex flex-col gap-6 list-1 hidden ">
+                        <li class=""><Span class="xl text-red-700">Web-development/frontEnd </Span><br>Designing WebSite and making creative. </li>
+                        <li class=""><span class="text-red-700">Tailwind CSS</span><br>Making website using Tailwind CSS</li>
+                        <li class=""><span class="text-red-700 ">JAVA /Till Core </span> <br> I have learn java till core for DSA . according to requarment it well extend </li>
+                    </ul>
+                    <ul class="flex flex-col gap-6 list-disc list-2 hidden " >
+                        <li><span class="text-red-700 text-xl ">2023-Current </span><br>Learing java Script for developing frontend & DSA  </li>
+                        <li><span class="text-red-700 text-xl">2022-2023</span><br> I was learing java and understanding basic of coding </li>
+                    </ul>
+                    <ul class="flex flex-col list-disc gap-6 list-3 hidden  ">
+                        <li><span class="text-red-700 text-xl ">current / B.Tech (CSE)</span><br>persuing B.Tech with Coumputer science (CSE) </li>
+                        <li><span class="text-red-700 text-xl "> 12th </span> <br> Complete with (math ,physics ,chemistry ) </li>
+                    </ul>
+                    <ul class="list-disc flex flex-col gap-6 list-4 hidden ">
+                        <li><span class="text-red-700 text-xl">Keshav Maheshvari </span> <br>Back-End Developer </li>
+                        <li><span class="text-red-700 text-xl">Ayush</span> <br>Back-End Developer & frontEnd developer  </li>
+                        <li><span class="text-red-700 text-xl">Oham Das </span> <br>Learing BackEnd Till now </li>
+
+                        
+                        
+                    </ul>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //// services section ///// -->
+
+       <div id="services" class="container mx-auto flex flex-col gap-20 ">
+          
+         <div class="text-5xl text-white font-bold pl-28 pt-32 ">Our  Services </div>
+         <div class="ser-box flex pl-28 gap-10  ">
+
+            <!-- Box-1   -->
+            <div class="first-box w-1/4 rounded-md   ">
+                <i class="fa-solid fa-code text-4xl"></i>
+                <h2 class=" pt-3 text-2xl text-white font-bold">Web Design</h2>
+                <p >We disign web as a full stack . we have team for  disign all stuff . In my team I am a front-end developer . so I design all the intrective pages.</p>
+                  <p class="cursor-pointer">learn more....</p>
+
+            </div>
+
+            <!-- Box-2 -->
+            <div class="second-box w-1/4 rounded-md ">
+                <i class="fa-solid fa-database text-3xl"></i>
+                <h2 class=" pt-3  text-2xl text-white font-bold">Learning DSA</h2>
+                <p>If you will have any doubt about DSA topic we can discus with each other and we will try solve that problem together </p>
+                <p class="cursor-pointer">Learn more..</p>
+            </div>
+                
+
+
+            <!-- box-3 -->
+            <div class="third-box w-1/4  rounded-md ">
+                <i class="fa-solid fa-poo text-3xl"></i>
+
+                <h2 class=" pt-3  text-2xl text-white font-bold">UI/UX Disign</h2>
+                <p> User experience is focused on what the end user encounters, whereas service design is focused on how that user experience is internally created.</p>
+                <p>Learn more...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!--  My work section is here  -->
+    <div  class="container mx-auto pt-16 ">
+        <div class="text-6xl  font-bold pl-28">My work </div>
+        <div class="img flex pl-28 pt-10 gap-10   ">
+            <div  class="w-3/12 work  ">
+                <img  class="rounded-md" src="/Images/work-1.png" alt="">
+                <div class="layer">
+                    <h1 class="text-xl">Social Media</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, consectetur odio, minima, delectus optio sint in!</p>
+                    <a class="flex justify-center text-4xl" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="w-3/12 work ">
+                <img class="rounded-md"  src="/Images/work-2.png" alt="">
+                <div class="layer">
+                    <h1 class="text-xl">Social Media</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, consectetur odio, minima, delectus optio sint in!</p>
+                    <a class="flex justify-center text-4xl" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="w-3/12 work ">
+                <img class="rounded-md"  src="/Images/work-3.png" alt="">
+                <div class="layer">
+                    <h1 class="text-xl">Social Media</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, consectetur odio, minima, delectus optio sint in!</p>
+                    <a class="flex justify-center text-4xl" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+              <div class="flex justify-center pt-20">
+                <button class="w-32 h-12  border-solid border-2 border-red-900  rounded-xl hover:bg-red-400   ">See More</button>
+              </div>
+    </div>
+
+
+    <!-- Contact section  -->
+
+    <div id="contact" class="container mx-auto pl-28 pt-10">
+        <div class="flex contact justify-around ">
+            <!-- Contact left  -->
+            <div class="contact-left flex flex-col gap-y-10">
+                <h1 class="text-6xl font-bold">Contact Me</h1>
+                <a class="text-2xl" href="mailto: anshur9608837@gmail.com"><i class="fa-solid fa-envelope icon"></i> <span>anshur9608837@gmail.com</span></a>
+                <a class="text-2xl" href="tel:9608837964"><i  class="fa-solid fa-phone icon"></i><span>9608837964</span></a>
+                <div class="icons flex gap-5">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <button class="btn-cv w-32 py-4  rounded-md ">Download CV </button>
+            </div>
+
+           
+
+
+            <div class="contact-right ">
+                <form name="submit-to-google-sheet">
+                   <div class="flex flex-col gap-10" >
+                    <input class="in-1  text-xl text-zinc-300  " name="Name" type="text" placeholder="Your Name">
+                    <input class="in-2  text-xl text-zinc-300 " name="Email"  type="email" placeholder="Your Email ">
+                    <textarea class=" pl-4 in-3 rounded-xl  text-xl text-zinc-300" name="message" name="Message"  rows="7" placeholder="Your Message "></textarea>
+                    <button id="btn"  type="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- copyright content is here -->
+
+    <div class="bg-gray-900 h-20 mt-10 flex justify-center items-center text-2xl ">Made with <span>>></span> <i class="fa-sharp fa-solid fa-people-group py-3"></i> Clique :: by Anshu Pandey.</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+              
+
+       <script src="/index.js"></script>
+
+
+       <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx2k9HTNMR9s3G0S-PnQt8Hw5znhL9QG3vy1nKN8MFTDGp1BAtrVd9zQUQMBgsynDWi/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
+
+
+<!--  link for google sheet -->
+<!--    https://docs.google.com/spreadsheets/d/17d6GB5wZ9aRVfeO0na8smoZKy33lUKGxA4WWGzWZ4lI/edit#gid=0       -->
